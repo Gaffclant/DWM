@@ -2,7 +2,7 @@
 
 # Display date
 
-echo "^c#83a598^ $(date +%x)  ^d^ "
+echo "$(date +%x)   "
 
 case $BLOCK_BUTTON in
     1) notify-send "$(cal)" ;;

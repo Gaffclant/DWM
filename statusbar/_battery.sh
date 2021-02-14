@@ -4,31 +4,31 @@
 
 CAP="$(cat /sys/class/power_supply/BAT0/capacity)"
 STATUS="$(cat /sys/class/power_supply/BAT0/status)"
-STATE="^c#d3869b^"
+
 
 if [ "$STATUS" = "Full" ]; then
-  ICON=""; STATE="^c#b8bb26^"
+  ICON=""; 
 elif [ "$STATUS" = "Discharging" ]; then
     if [ "$CAP" -ge 90 ]; then
-        ICON=""; STATE="^c#b8bb26^"
+        ICON=""; 
     elif [ "$CAP" -ge 80 ]; then
-        ICON=""; STATE="^c#b8bb26^"
+        ICON=""; 
     elif [ "$CAP" -ge 70 ]; then
-        ICON=""; STATE="^c#b8bb26^"
+        ICON=""; 
     elif [ "$CAP" -ge 60 ]; then
-        ICON=""; STATE="^c#fabd2f^"
+        ICON=""; 
     elif [ "$CAP" -ge 50 ]; then
-        ICON=""; STATE="^c#fabd2f^"
+        ICON=""; 
     elif [ "$CAP" -ge 40 ]; then
-        ICON=""; STATE="^c#fabd2f^"
+        ICON=""; 
     elif [ "$CAP" -ge 30 ]; then
-        ICON=""; STATE="^c#fb4934^"
+        ICON=""; 
     elif [ "$CAP" -ge 20 ]; then
-        ICON=""; STATE="^c#fb4934^"
+        ICON=""; 
     elif [ "$CAP" -ge 10 ]; then
-        ICON=""; STATE="^c#fb4934^"
+        ICON=""; 
     else
-        ICON=""; STATE="^c#fb4934^"
+        ICON=""; 
     fi
 elif [ "$STATUS" = "Not charging"  ]; then
     ICON=""
@@ -36,4 +36,4 @@ elif [ "$STATUS" = "Charging" ]; then
     ICON=""
 fi
 
-echo "${STATE}${CAP}% ${ICON}^d^ "
+echo "${CAP}% ${ICON} "

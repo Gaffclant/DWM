@@ -5,10 +5,9 @@
 
 main() {
 
-. ~/.config/statusbar/_wifi.sh ;
-. ~/.config/statusbar/_battery.sh ;
-. ~/.config/statusbar/_displaytime.sh ;
-
+. ~/.config/dwm/statusbar/_wifi.sh ;
+. ~/.config/dwm/statusbar/_battery.sh ;
+. ~/.config/dwm/statusbar/_displaytime.sh ;
 }
 
 while true;
